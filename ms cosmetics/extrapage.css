@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Tangerine:wght@700&display=swap');
+/* {font-family: 'Tangerine', cursive; }*/
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@300&display=swap');
+/* font-family: 'Kodchasan', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+/* font-family: 'Josefin Sans', sans-serif; */
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffc2d0;
+    transition: all .7s ease;
+    max-width: 100vw;
+    overflow-x: hidden ;
+}
+main{opacity: 0; transition: all .5s ease-in;}
+h1.p1, .p2 {
+    font-size: 5rem; font-family: 'Tangerine', cursive; margin: 4rem 4rem 0 4rem;
+}
+h1.p1 span, .p2 span{ border-radius: 25px; width: 85vw;  position: absolute; transform: translate(0,6rem) scaleX(0); height: .2rem; background-color: seagreen;  transition: all 2s ease; transform-origin: left;}
+h1.p1 span.span, .p2 span.span{transform: translate(0,6rem) scaleX(1);}
+h3.p1{
+font-family: 'Kodchasan', sans-serif; font-size: 2rem; padding: 2rem; margin: 1rem 3rem; line-height: 3.5rem; word-spacing: .5rem; pointer-events: none;
+}
+.one, .two, .three{position: absolute; top: 0; z-index: -1; transition: all 1s ease-out;}
+.one{width: 30%; left: 5%; top: 100%; transform: translateX(-150%);}
+.two{width: 30%; right: 5%; top: 150%; transform: translateX(150%);}
+.three{width: 30%; left: 5%; top: 200%; transform: translateX(-150%);}
+/* .one, .two, .three{transform: translateX(0);} */
+
+#go{font-size: 3rem; margin: 5% 5%; text-decoration: none; color: #335004; transition: all .5s ease; }
+#go:hover{font-size: 3.5rem; color: black;}
+
+
+/* ⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕ */
+
+.item1,.item2,.item3,.item4,.item5,.item7,.item6,.item8,.item9,.item10,.item11,.item12,.item13{  width: 100vw; height: 40vh; display: grid; grid-template-columns: 3fr 1fr; margin: 5% 0; }
+
+.item1 .matter,.item2 .matter,.item3 .matter,.item4 .matter,.item5 .matter,.item7 .matter,.item6 .matter,.item8 .matter,.item9 .matter,.item10 .matter,.item11 .matter,.item12 .matter,.item13 .matter{ margin: 2rem; }
+
+.item1 h2,.item2 h2,.item3 h2,.item4 h2,.item5 h2,.item7 h2,.item6 h2,.item8 h2,.item9 h2,.item10 h2,.item11 h2,.item12 h2,.item13 h2{font-family: 'Josefin Sans', sans-serif; margin: 0 0 0 1%; font-size: 4rem; }
+
+.item1 p,.item2 p,.item3 p,.item4 p,.item5 p,.item7 p,.item6 p,.item8 p,.item9 p,.item10 p,.item11 p,.item12 p,.item13 p{margin: 2%; font-size: 2rem; font-family: 'Poppins', sans-serif; }
+
+.item1 button,.item2 button,.item3 button,.item4 button,.item5 button,.item7 button,.item6 button,.item8 button,.item9 button,.item10 button,.item11 button,.item12 button,.item13 button{background-color: transparent; padding: 1rem; margin: 0 0 0 2%; border-radius: 10px; border: 2px solid seagreen; cursor: pointer; transition: all .5s ease; }
+
+.item1 button:hover,.item2 button:hover,.item3 button:hover,.item4 button:hover,.item5 button:hover,.item7 button:hover,.item6 button:hover,.item8 button:hover,.item9 button:hover,.item10 button:hover,.item11 button:hover,.item12 button:hover,.item13 button:hover{padding: 1.5rem;}
+
+.item1 img,.item2 img,.item3 img,.item4 img,.item5 img,.item7 img,.item6 img,.item8 img,.item9 img,.item10 img,.item11 img,.item12 img,.item13 img{width: 20vw; height: 40vh; border: 2px solid seagreen; border-radius: 10px; transition: all 1.5s ease; transform: translateX(150%);}
+
+main.p2{opacity: 0;}
+
+body{position: relative;}
+body.about{height: 80rem;}
+.pagetrans.itson .trans{
+    position: fixed; bottom: 0; left: -100vw; width: 100vw; height: 100%; pointer-events: none; z-index: 50;
+}
+.pagetrans.itson .trans.trans1{background-color: #ffc2d0; animation: side 0.7s 0s forwards ease-out;}
+.pagetrans.itson .trans.trans2{background-color: #403632; animation: side 0.7s .5s forwards ease-out;}
+.pagetrans.itson .trans.trans3{background-color: #335004; animation: side 0.7s .9s forwards ease-out;}
+@keyframes side {
+    100%{left: 0;}
+}
+
+/* ⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁ */
+/* ⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁ */
+
+@media (max-width: 900px) {
+    h1.p1, .p2{margin: 3rem 2rem;}
+    .item1,.item2,.item3,.item4,.item5,.item7,.item6,.item8,.item9,.item10,.item11,.item12,.item13{margin: 15% 0;}        
+    .item1 .matter,.item2 .matter,.item3 .matter,.item4 .matter,.item5 .matter,.item7 .matter,.item6 .matter,.item8 .matter,.item9 .matter,.item10 .matter,.item11 .matter,.item12 .matter,.item13 .matter{margin: 2rem 0;}
+    .item1 img,.item2 img,.item3 img,.item4 img,.item5 img,.item7 img,.item6 img,.item8 img,.item9 img,.item10 img,.item11 img,.item12 img,.item13 img{width: 30vw;}
+}
+
+@media (max-width: 500px) {
+
+    body{width: 100vw; max-width: 100vw; overflow-x: hidden;}
+
+    body.about{height: 100rem;}
+
+    h1.p1, .p2 {
+    margin: 2rem 2rem -2rem 2rem;}
+        h1.p1{margin: 0; height: 20vh; padding: 10% 5%; }
+        h1.p2{margin: 0;}
+ h3.p1{
+     padding: 0; font-size: 1.5rem; line-height: 3rem;
+ }   
+
+#go{font-size: 2.5rem; margin: 10% 5%; }
+#go:hover{font-size: 1rem; color: black;}
+
+.one, .two, .three{transform: translateX(0);}
+ .one{width: 60%; top: 100%;} .two{width: 60%; top: 150%;} .three{width: 60%; top: 200%;}
+
+ .item1,.item2,.item3,.item4,.item5,.item7,.item6,.item8,.item9,.item10,.item11,.item12,.item13{  width: 100vw; height: 40vh; display: grid; grid-template-columns: 1fr 1fr; margin: 20% 0%; }
+ 
+.item1 .matter,.item2 .matter,.item3 .matter,.item4 .matter,.item5 .matter,.item7 .matter,.item6 .matter,.item8 .matter,.item9 .matter,.item10 .matter,.item11 .matter,.item12 .matter,.item13 .matter{ margin: 5% 0; line-height: 1.3rem; }
+
+.item1 h2,.item2 h2,.item3 h2,.item4 h2,.item5 h2,.item7 h2,.item6 h2,.item8 h2,.item9 h2,.item10 h2,.item11 h2,.item12 h2,.item13 h2{font-family: 'Josefin Sans', sans-serif; margin: 0 0 0 0%; font-size: 2.5rem; }
+
+.item1 p,.item2 p,.item3 p,.item4 p,.item5 p,.item7 p,.item6 p,.item8 p,.item9 p,.item10 p,.item11 p,.item12 p,.item13 p{margin: 5% 0; font-size: 1.3rem; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+.item1 button,.item2 button,.item3 button,.item4 button,.item5 button,.item7 button,.item6 button,.item8 button,.item9 button,.item10 button,.item11 button,.item12 button,.item13 button{ padding: .5rem; margin: 0 0 0 0%; }
+
+.item1 button:hover,.item2 button:hover,.item3 button:hover,.item4 button:hover,.item5 button:hover,.item7 button:hover,.item6 button:hover,.item8 button:hover,.item9 button:hover,.item10 button:hover,.item11 button:hover,.item12 button:hover,.item13 button:hover{padding: .8rem;}
+
+.item1 img,.item2 img,.item3 img,.item4 img,.item5 img,.item7 img,.item6 img,.item8 img,.item9 img,.item10 img,.item11 img,.item12 img,.item13 img{width: 40vw; height: 30vh; margin: auto;}
+
+
+}

@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+/* font-family: 'Josefin Sans', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap'); 
+/* font-family: 'Cookie', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@300&display=swap');
+/* font-family: 'Kodchasan', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Tangerine:wght@700&display=swap');
+/* {font-family: 'Tangerine', cursive; }*/
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffc2d0;
+    transition: all .7s ease;
+    max-width: 100vw;
+    overflow-x: hidden ;
+} 
+
+
+
+nav{ padding:3rem 4rem 0 4rem; display: flex; align-items: center; justify-content: space-between; max-width: 100vw;}
+/* menu icon */
+#veggie{
+    width: 5rem; height: 5rem; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; cursor: pointer;  overflow: hidden; z-index: 20; }
+#veggie span{border-radius: 25px; height: .3rem; background-color:#335004 ; position: absolute; transition: all .5s ease;}
+#veggie span:first-child{transform: translateY(-1.2rem); width: 2rem;} #veggie span:nth-child(2){width: 2.5rem;}  #veggie span:last-child{transform: translateY(1.25rem); width: 2rem; } #veggie.add span{background-color: #ffc2d0 ;} 
+#veggie.add span:first-child{transform: translateY(0rem) rotate(45deg);} #veggie.add span:nth-child(2){transform: translateX(200%);} 
+#veggie.add span:last-child{transform: translateY(0rem) rotate(-45deg);}
+/* logo icon */
+nav .logo{
+    width: 7rem;  height: 7rem; border-radius: 50%; cursor: pointer; border: 2px #335004 solid;  z-index: 15; }
+/* nav .logo,lofo{animation:logo 3s 1 alternate ease;} */
+    nav .logo img{
+    width: 100%; height: 100%; border-radius: 50%; cursor: pointer;
+}
+@keyframes logo {
+    0%{width: 40%; height: 40%;} 70%{width: 40%; height: 40%;}100%{width: 7rem; height: 7rem;}
+}
+nav .cart, nav .hamburger{animation: logo1 2s 1 alternate ease;}
+@keyframes logo1 {
+    0%{opacity: 0; transform: translate(-200rem);} 100%{opacity: 1; transform: translate(0%);}
+}
+/* cart icon */
+nav .cart{ z-index: 20;
+    width: 5rem; height: 5rem;  color: #335004; display: flex; align-items: center;  cursor: pointer; overflow: hidden; transition: all 2.5s ease;
+} #cart{ font-size: 3rem; }
+nav .cart.add #cart{animation: cart 1.5s 1 alternate ease; color: #ffc2d0;}
+@keyframes cart{
+    50%{transform: translate(-200%);} 100%{transform: translate(0,0);}
+}
+/* menu */
+/* clip path - clippy */
+.menu{
+    width: 1rem; height: 1rem; opacity: 0; background-color: #335004; position: absolute; top: 0%; left: 0%; clip-path: circle(63.4% at 36% 36%); transition: all 1s ease; transform:translate(-100%,-100%); z-index: 1;
+}
+.menu ul{list-style: none; font-size: 3rem; font-family: 'Poppins', sans-serif; display: flex; flex-direction: column; margin: 6rem 0 0 6rem;} 
+.menu ul li{margin: 3rem;} .menu ul li a{text-decoration: none; color: #ffc2d0;}
+.menu.add{
+    width: 55rem; height: 55rem; opacity: 1;  transform:translate(0%,0%);
+}
+.cartmenu{width: 1rem; height: 1rem; opacity: 0; background-color: #335004; position: absolute; top: 0%; right: 0%; clip-path: circle(63.4% at 68% 35%); transition: all 1s ease; display: flex; flex-direction: column; align-items: center; justify-content: center; transform:translate(150%,-150%); color: #ffc2d0; font-family: 'Kodchasan', sans-serif; }
+.cartmenu.add{
+    width: 55rem; height: 55rem; opacity: 1; z-index: 12; transform:translate(0%,0%); 
+}
+/* main content */
+main{transform: translateY(200%); transition: all .5s ease; }
+@keyframes main {
+    100%{transform: translateY(0);}
+}
+/* header */
+header{
+     display: flex; align-items: center; justify-content: space-between; position: relative; top: -4.5rem; max-width: 100vw; pointer-events: none;
+}
+/* images */
+header .photos img:first-child{width: 50rem;} header section{position: absolute; right: 0; z-index: 3; }
+header .photos .leaf1 img,header .photos .leaf2 img,header .photos .leaf3 img, header .photos .leaf4 img, header .photos .leaf5 img, header .photos .leaf6 img, header .photos .leaf7 img, header .photos .leaf8 img, header .photos .leaf9 img, header .photos .leaf10 img{width: 10rem; z-index: 10; transform: translate(-3rem,-8rem);}
+
+header .photos .leaf1{animation: leaf 2s  infinite alternate ease; right: 4rem;}
+header .photos .leaf2{  animation: leaf 2s .5s infinite alternate ease; right: 5rem;}
+header .photos .leaf3{  animation: leaf 2s 1s infinite alternate ease; right: 10rem;}
+header .photos .leaf4{  animation: leaf 2s 1.5s infinite alternate ease; right: 13rem;}
+header .photos .leaf5{  animation: leaf 2s 2s infinite alternate ease; right: 16rem;}
+header .photos .leaf6{  animation: leaf 2s 2.5s infinite alternate ease; right: 19rem;}
+header .photos .leaf7{  animation: leaf 2s 3s infinite alternate ease; right: 22rem;}
+header .photos .leaf8{  animation: leaf 2s 3.5s infinite alternate ease; right: 25rem;}
+header .photos .leaf9{  animation: leaf 2s 4s infinite alternate ease; right: 28rem;}
+header .photos .leaf10{  animation: leaf 2s 3.5s infinite alternate ease; right: 33.2rem;}
+@keyframes leaf {
+    50%{transform: rotate(10deg);}    100%{transform:rotate(-10deg);} 
+}
+/* heading  */
+header .text{margin: 0 14rem; padding: 10rem;}
+header .text .h1{font-size: 3rem; line-height: 7rem;  font-family: 'Poppins', sans-serif; }
+/* scroll */
+.scroll{width: 100vw; position: relative; transform: translateY(-12rem); height: 15vh; display: flex; z-index: 2; overflow: hidden;  transition: all 1s ease;}
+.scroll span{height: 60%; width: 2px; border-radius: 25px; background: black; margin: auto; transform: translateY(-150%); animation: scroll 1.3s infinite 6s forwards linear;}
+
+.scroll1{width: 100vw; position: relative; height: 15vh; display: flex; overflow: hidden; z-index: 2;  transition: all 1s ease;}
+.scroll1 span{height: 60%; width: 2px; border-radius: 25px; background: black; margin: auto; transform: translateY(-150%); animation: scroll 1.3s infinite forwards linear;}
+
+.scroll2{width: 100vw; position: relative; height: 15vh; display: flex; overflow: hidden; z-index: 2;  transition: all 1s ease;}
+.scroll2 span{height: 60%; width: 2px; border-radius: 25px; background: black; margin: auto; transform: translateY(-150%); animation: scroll 1.3s infinite forwards linear;}
+
+@keyframes scroll {
+    100%{transform: translateY(150%);}
+}
+/* small about */
+.sabout{
+    font-size: 2rem;width: 100vw; height: auto; text-align: left; padding: 2rem 5rem; display: flex; flex-direction: column; line-height: 3.5rem; background: linear-gradient(to right,#e2d8b5,#f5d5d3); 
+}
+.sabout h1{font-family: 'Tangerine', cursive; position: relative; text-shadow: 2px 5px 5px rgba(0, 0, 0, .5);}
+.sabout h1 span{ border-radius: 25px; width: 10rem; position: absolute; transform: translate(0,4rem) scaleX(0); height: .2rem; background-color: #335004;  transition: all 1s ease; transform-origin: left;}
+.sabout h1 span.span{transform: translate(0,4rem) scaleX(1);}
+.sabout p{ word-spacing: 1rem; margin:-1rem 0 2rem 2rem; font-family: 'Kodchasan', sans-serif; font-weight: 600;}
+/* porducts */
+.prod{overflow: hidden;}
+.prod h1{font-family: 'Tangerine', cursive; font-size: 5.5rem; position: relative; left: 5%;  text-shadow: 2px 5px 5px rgba(0, 0, 0, .5);}
+.prod h1 span{ border-radius: 25px; width: 12rem; position: absolute; height: .2rem; transform: translateY(5rem) scaleX(0) ; background-color: #335004; transition: all 1s ease; transform-origin: left;}
+.prod h1 span.span{transform: translateY(5rem) scaleX(1);}
+
+#contact{
+    max-width: 100vw; height: auto; background: #335004; overflow: hidden; }
+#contact h1{font-size: 5rem; text-align: center; color: #f8f8f8; text-shadow: 5px 10px 7px rgba(0, 0, 0, .5);  font-family: 'Tangerine', cursive;}
+#contact h1 span{ border-radius: 25px; width: 13rem; position: absolute; transform: translate(0,5rem) scaleX(0); height: .2rem; background-color: #f8f8f8;  transition: all 1s ease; transform-origin: left;}
+#contact h1 span.span{transform: translate(0,5rem) scaleX(1);}
+#contact  .cont form{display: flex; align-items: center; flex-direction: column; width: 50vw;}
+#contact  .cont form input, textarea{margin: 2rem;}
+#contact  .cont form textarea,#contact  .cont form .name{width: 40%; height: 3rem; border-radius: 10px; background-color: #e2d8b5;}
+#contact  .cont form textarea{height: auto; z-index: 1;}
+#contact .cont form input::placeholder,textarea::placeholder{font-family: 'Poppins', sans-serif; text-align: center;}
+#contact .cont form input:focus, #contact form textarea:focus{background-color: #f8f8f8;}
+#contact .cont form button{cursor: pointer; padding: .8rem; background-color: transparent; border-radius: 10px; font-size: 1.8rem; text-decoration: none; color: #f8f8f8; border: 1px solid #e2d8b5 ; transition: all .5s ease; z-index: 1;}
+#contact .cont form button:hover{padding: 1.2rem;}
+#contact .cont form .h2{margin: 2% 3%; text-align: center; color: azure; font-size: 2rem; z-index: 2; font-family: 'Poppins', sans-serif;}
+#contact .cont form img{position: absolute; bottom: 0; opacity: 0; filter: brightness(1) saturate(5);}
+#contact a{color: #ffc2d0; font-size: 3rem;}
+#contact .cont{display: flex; flex-direction: row; justify-content: space-evenly; min-width: 100vw;}
+#contact .cont .media{display: grid; grid-template-columns: 3fr 2fr; margin: 5% 0 0 5%; width: 30vw; border: transparent dashed 2px;}
+@keyframes cele {
+    100%{opacity: 1;}
+}
+/* #contact a.fb{left: 2%; bottom: 9%;}#contact a.insta{right: 2%; bottom: 6%;}#contact a.whats{right: 2%; bottom: 3%;} */
+/* #contact a.github{left: 10%; bottom: 9%;}#contact a.twitter{left: 2%; bottom: 6%;}#contact a.site{left: 2%; bottom: 3%;} */
+/* ⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁ */
+/* .carousal1 */
+
+.container1{position: relative; width: 90vw; height: auto; margin: 5% auto;}
+.container1 h1{font-size: 4rem; font-family: 'Cookie', cursive; text-align: center; font-weight: lighter; margin: 2% 0; }
+.container1 .carousal1 {height:70%; width:70%; border-radius:10px; border: solid black 2px; margin: auto; overflow: hidden;}
+.container1 .carousal1 .formove{flex-direction: row; display: flex;  transition: all 1s ease;}
+
+.container1 .carousal1 .item1,.container1 .carousal1 .item2,.container1 .carousal1 .item3,.container1 .carousal1 .item4,.container1 .carousal1 .item5{ min-height: 100%; min-width: fit-content; display: flex; flex-direction: row; margin: auto; background-color: rgb(181, 151, 140) ; border-radius:10px ; font-family: 'Josefin Sans', sans-serif; position: relative; }
+
+.container1 .carousal1 .item1 img,.container1 .carousal1 .item2 img, .container1 .carousal1 .item3 img, .container1 .carousal1 .item4 img, .container1 .carousal1 .item5 img{ height: 70vh; width: 50%; border-radius:10px;}
+
+.container1 .carousal1 .item1 .matter,.container1 .carousal1 .item2 .matter,.container1 .carousal1 .item3 .matter,.container1 .carousal1 .item4 .matter,.container1 .carousal1 .item5 .matter{display: grid; margin: 5rem;}
+
+.container1 .carousal1 .item1 .matter h2,.container1 .carousal1 .item2 .matter h2,.container1 .carousal1 .item3 .matter h2,.container1 .carousal1 .item4 .matter h2,.container1 .carousal1 .item5 .matter h2{font-size: 4rem; font-weight: 500;}
+
+.container1 .carousal1 .item1 .matter p,.container1 .carousal1 .item2 .matter p,.container1 .carousal1 .item3 .matter p,.container1 .carousal1 .item4 .matter p,.container1 .carousal1 .item5 .matter p{font-size: 2rem;}
+
+.container1 .carousal1 .item1 .matter h3,.container1 .carousal1 .item2 .matter h3,.container1 .carousal1 .item3 .matter h3,.container1 .carousal1 .item4 .matter h3,.container1 .carousal1 .item5 .matter h3{font-size: 2.2rem; font-weight: 500;}
+
+.container1 .carousal1 .item1 .matter button,.container1 .carousal1 .item2 .matter button,.container1 .carousal1 .item3 .matter button,.container1 .carousal1 .item4 .matter button,.container1 .carousal1 .item5 .matter button{font-size: 1.7rem; border-radius: 10px; background-color: transparent; border: 2px solid rgb(62, 53, 44); margin: 1rem; cursor: pointer; transition: all .5s ease;}
+
+.container1 .carousal1 .item1 .matter button:hover,.container1 .carousal1 .item2 .matter button:hover,.container1 .carousal1 .item3 .matter button:hover,.container1 .carousal1 .item4 .matter button:hover,.container1 .carousal1 .item5 .matter button:hover{ padding: 1rem;color: wheat; font-weight: bolder;}
+
+.container1 .carousal1 .item1 .matter a,.container1 .carousal1 .item2 .matter a,.container1 .carousal1 .item3 .matter a,.container1 .carousal1 .item4 .matter a,.container1 .carousal1 .item5 .matter a{font-size: 1.8rem; border-radius: 10px; border: 2px solid rgb(62, 53, 44); margin: 1rem; cursor: pointer; transition: all .5s ease; display: grid; place-content: center; text-decoration: none; color: black; }
+
+.container1 .carousal1 .item1 .matter a:hover,.container1 .carousal1 .item2 .matter a:hover,.container1 .carousal1 .item3 .matter a:hover,.container1 .carousal1 .item4 .matter a:hover,.container1 .carousal1 .item5 .matter a:hover{ padding: 1rem; color: wheat; font-weight: bolder;}
+
+.container1 .carousal1 .item1 .matter span,.container1 .carousal1 .item2 .matter span,.container1 .carousal1 .item3 .matter span,.container1 .carousal1 .item4 .matter span,.container1 .carousal1 .item5 .matter span{position: absolute; bottom: 1%; right:1%; font-size: 1.8rem; }
+
+.container1 .carousal1 .item2{background-color: rgb(230,185,192);}
+.container1 .carousal1 .item3{background-color: rgb(131,131,131);}
+.container1 .carousal1 .item4{ background-color: rgb(208,140,161);}
+.container1 .carousal1 .item5{background-color: rgb(211,189,175);}
+
+.container1 .next1{position: absolute; top: 50%; right: 2%; font-size: 3rem; cursor: pointer; }
+.container1 .prev1{position: absolute; top: 50%; left: 2%; font-size: 3rem; cursor: pointer; }
+
+
+
+.container2{position: relative; width: 90vw; height: auto;margin: 5% auto;}
+.container2 h1{font-size: 4rem; font-family: 'Cookie', cursive; text-align: center; margin: 2% 0; font-weight: lighter; }
+.container2 .carousal2 {height:70%; width:70%; border-radius:10px; border: solid black 2px; margin: auto; overflow: hidden;}
+.container2 .carousal2 .formove{flex-direction: row; display: flex;  transition: all 1s ease;}
+
+.container2 .carousal2 .item1,.container2 .carousal2 .item2,.container2 .carousal2 .item3,.container2 .carousal2 .item4,.container2 .carousal2 .item5{ min-height: 100%; min-width: fit-content; display: flex; flex-direction: row; margin: auto; background-color: rgb(181, 151, 140) ; border-radius:10px ; font-family: 'Josefin Sans', sans-serif; position: relative; }
+
+.container2 .carousal2 .item1 img,.container2 .carousal2 .item2 img, .container2 .carousal2 .item3 img, .container2 .carousal2 .item4 img, .container2 .carousal2 .item5 img{ height: 70vh; width: 50%; border-radius:10px;}
+
+.container2 .carousal2 .item1 .matter,.container2 .carousal2 .item2 .matter,.container2 .carousal2 .item3 .matter,.container2 .carousal2 .item4 .matter,.container2 .carousal2 .item5 .matter{display: grid; margin: 5rem;}
+
+.container2 .carousal2 .item1 .matter h2,.container2 .carousal2 .item2 .matter h2,.container2 .carousal2 .item3 .matter h2,.container2 .carousal2 .item4 .matter h2,.container2 .carousal2 .item5 .matter h2{font-size: 4rem; font-weight: 500;}
+
+.container2 .carousal2 .item1 .matter p,.container2 .carousal2 .item2 .matter p,.container2 .carousal2 .item3 .matter p,.container2 .carousal2 .item4 .matter p,.container2 .carousal2 .item5 .matter p{font-size: 2rem;}
+
+.container2 .carousal2 .item1 .matter h3,.container2 .carousal2 .item2 .matter h3,.container2 .carousal2 .item3 .matter h3,.container2 .carousal2 .item4 .matter h3,.container2 .carousal2 .item5 .matter h3{font-size: 2.2rem; font-weight: 500;}
+
+.container2 .carousal2 .item1 .matter button,.container2 .carousal2 .item2 .matter button,.container2 .carousal2 .item3 .matter button,.container2 .carousal2 .item4 .matter button,.container2 .carousal2 .item5 .matter button{font-size: 1.7rem; border-radius: 10px; background-color: transparent; border: 2px solid rgb(62, 53, 44); margin: 1rem; cursor: pointer; transition: all .5s ease;}
+
+.container2 .carousal2 .item1 .matter button:hover,.container2 .carousal2 .item2 .matter button:hover,.container2 .carousal2 .item3 .matter button:hover,.container2 .carousal2 .item4 .matter button:hover,.container2 .carousal2 .item5 .matter button:hover{ padding: 1rem;color: wheat; font-weight: bolder;}
+
+.container2 .carousal2 .item1 .matter a,.container2 .carousal2 .item2 .matter a,.container2 .carousal2 .item3 .matter a,.container2 .carousal2 .item4 .matter a,.container2 .carousal2 .item5 .matter a{font-size: 1.8rem; border-radius: 10px; border: 2px solid rgb(62, 53, 44); margin: 1rem; cursor: pointer; transition: all .5s ease; display: grid; place-content: center; text-decoration: none; color: black;}
+
+.container2 .carousal2 .item1 .matter a:hover,.container2 .carousal2 .item2 .matter a:hover,.container2 .carousal2 .item3 .matter a:hover,.container2 .carousal2 .item4 .matter a:hover,.container2 .carousal2 .item5 .matter a:hover{ padding: 1rem;color: wheat; font-weight: bolder;}
+
+.container2 .carousal2 .item1 .matter span,.container2 .carousal2 .item2 .matter span,.container2 .carousal2 .item3 .matter span,.container2 .carousal2 .item4 .matter span,.container2 .carousal2 .item5 .matter span{position: absolute; bottom: 1%; right:1%; font-size: 1.8rem; }
+
+.container2 .carousal2 .item1{background-color: rgb(237,210,215);}
+.container2 .carousal2 .item2{background-color: rgb(101,134,169);}
+.container2 .carousal2 .item3{background-color: #f5d5d3;}
+.container2 .carousal2 .item4{ background-color: rgb(236,192,189);}
+.container2 .carousal2 .item5{background-color: rgb(252,221,216);}
+
+.container2 .next2{position: absolute; top: 50%; font-size: 3rem; right: 2%; cursor: pointer; }
+.container2 .prev2{position: absolute; top: 50%; font-size: 3rem; left: 2%; cursor: pointer; }
+
+
+
+.container3{position: relative; width: 90vw; height: auto;margin: 5% auto;}
+.container3 h1{font-size: 4rem; font-family: 'Cookie', cursive; text-align: center; font-weight: lighter; margin: 2% 0; }
+.container3 .carousal3 {height:70%; width:70%; border-radius:10px; border: solid black 2px; margin: auto; overflow: hidden;}
+.container3 .carousal3 .formove{flex-direction: row; display: flex;  transition: all 1s ease;}
+
+.container3 .carousal3 .item1,.container3 .carousal3 .item2,.container3 .carousal3 .item3,.container3 .carousal3 .item4,.container3 .carousal3 .item5{ min-height: 100%; min-width: fit-content; display: flex; flex-direction: row; margin: auto; background-color: rgb(181, 151, 140) ; border-radius:10px ; font-family: 'Josefin Sans', sans-serif; position: relative; }
+
+.container3 .carousal3 .item1 img,.container3 .carousal3 .item2 img, .container3 .carousal3 .item3 img, .container3 .carousal3 .item4 img, .container3 .carousal3 .item5 img{ height: 70vh; width: 50%; border-radius:10px;}
+
+.container3 .carousal3 .item1 .matter,.container3 .carousal3 .item2 .matter,.container3 .carousal3 .item3 .matter,.container3 .carousal3 .item4 .matter,.container3 .carousal3 .item5 .matter{display: grid; margin: 5rem;}
+
+.container3 .carousal3 .item1 .matter h2,.container3 .carousal3 .item2 .matter h2,.container3 .carousal3 .item3 .matter h2,.container3 .carousal3 .item4 .matter h2,.container3 .carousal3 .item5 .matter h2{font-size: 4rem; font-weight: 500;}
+
+.container3 .carousal3 .item1 .matter p,.container3 .carousal3 .item2 .matter p,.container3 .carousal3 .item3 .matter p,.container3 .carousal3 .item4 .matter p,.container3 .carousal3 .item5 .matter p{font-size: 2rem;}
+
+.container3 .carousal3 .item1 .matter h3,.container3 .carousal3 .item2 .matter h3,.container3 .carousal3 .item3 .matter h3,.container3 .carousal3 .item4 .matter h3,.container3 .carousal3 .item5 .matter h3{font-size: 2.2rem; font-weight: 500;}
+
+.container3 .carousal3 .item1 .matter button,.container3 .carousal3 .item2 .matter button,.container3 .carousal3 .item3 .matter button,.container3 .carousal3 .item4 .matter button,.container3 .carousal3 .item5 .matter button{font-size: 1.7rem; border-radius: 10px; background-color: transparent; border: 2px solid rgb(62, 53, 44); margin: 1rem; cursor: pointer; transition: all .5s ease;}
+
+.container3 .carousal3 .item1 .matter button:hover,.container3 .carousal3 .item2 .matter button:hover,.container3 .carousal3 .item3 .matter button:hover,.container3 .carousal3 .item4 .matter button:hover,.container3 .carousal3 .item5 .matter button:hover{ padding: 1rem;color: wheat; font-weight: bolder;}
+
+.container3 .carousal3 .item1 .matter a,.container3 .carousal3 .item2 .matter a,.container3 .carousal3 .item3 .matter a,.container3 .carousal3 .item4 .matter a,.container3 .carousal3 .item5 .matter a{font-size: 1.8rem; border-radius: 10px; border: 2px solid rgb(62, 53, 44); margin: 1rem; cursor: pointer; transition: all .5s ease; display: grid; place-content: center; text-decoration: none; color: black;}
+
+.container3 .carousal3 .item1 .matter a:hover,.container3 .carousal3 .item2 .matter a:hover,.container3 .carousal3 .item3 .matter a:hover,.container3 .carousal3 .item4 .matter a:hover,.container3 .carousal3 .item5 .matter a:hover{ padding: 1rem;color: wheat; font-weight: bolder;}
+
+.container3 .carousal3 .item1 .matter span,.container3 .carousal3 .item2 .matter span,.container3 .carousal3 .item3 .matter span,.container3 .carousal3 .item4 .matter span,.container3 .carousal3 .item5 .matter span{position: absolute; bottom: 1%; right:1%; font-size: 1.8rem; }
+
+.container3 .carousal3 .item1{background-color: rgb(219,129,128);}
+.container3 .carousal3 .item2{background-color: rgb(232,0,67);}
+.container3 .carousal3 .item3{background-color: rgb(218,138,113);}
+.container3 .carousal3 .item4{ background-color: red;}
+.container3 .carousal3 .item5{background-color: rgb(223,147,173);}
+
+.container3 .next3{position: absolute; top: 50%; right: 2%; font-size: 3rem; cursor: pointer; }
+.container3 .prev3{position: absolute; top: 50%; left: 2%; font-size: 3rem; cursor: pointer; }
+
+
+
+.container4{position: relative; width: 90vw; height: auto; margin: 5% auto;}
+.container4 h1{font-size: 4rem; font-family: 'Cookie', cursive; text-align: center; font-weight: lighter; margin: 2% 0; }
+.container4 .carousal4 {height:70%; width:70%; border-radius:10px; border: solid black 2px; margin: auto; overflow: hidden;}
+.container4 .carousal4 .formove{flex-direction: row; display: flex;  transition: all 1s ease;}
+
+.container4 .item1{color: #f8f8f8;}
+
+.container4 .carousal4 .item1,.container4 .carousal4 .item2,.container4 .carousal4 .item3,.container4 .carousal4 .item4,.container4 .carousal4 .item5{ min-height: 100%; min-width: fit-content; display: flex; flex-direction: row; margin: auto; background-color: rgb(181, 151, 140) ; border-radius:10px ; font-family: 'Josefin Sans', sans-serif; position: relative; }
+
+.container4 .carousal4 .item1 img,.container4 .carousal4 .item2 img, .container4 .carousal4 .item3 img, .container4 .carousal4 .item4 img, .container4 .carousal4 .item5 img{ height: 70vh; width: 50%; border-radius:10px;}
+
+.container4 .carousal4 .item1 .matter,.container4 .carousal4 .item2 .matter,.container4 .carousal4 .item3 .matter,.container4 .carousal4 .item4 .matter,.container4 .carousal4 .item5 .matter{display: grid; margin: 5rem;}
+
+.container4 .carousal4 .item1 .matter h2,.container4 .carousal4 .item2 .matter h2,.container4 .carousal4 .item3 .matter h2,.container4 .carousal4 .item4 .matter h2,.container4 .carousal4 .item5 .matter h2{font-size: 4rem; font-weight: 500;}
+
+.container4 .carousal4 .item1 .matter p,.container4 .carousal4 .item2 .matter p,.container4 .carousal4 .item3 .matter p,.container4 .carousal4 .item4 .matter p,.container4 .carousal4 .item5 .matter p{font-size: 2rem;}
+
+.container4 .carousal4 .item1 .matter h3,.container4 .carousal4 .item2 .matter h3,.container4 .carousal4 .item3 .matter h3,.container4 .carousal4 .item4 .matter h3,.container4 .carousal4 .item5 .matter h3{font-size: 2.2rem; font-weight: 500;}
+
+.container4 .carousal4 .item1 .matter button,.container4 .carousal4 .item2 .matter button,.container4 .carousal4 .item3 .matter button,.container4 .carousal4 .item4 .matter button,.container4 .carousal4 .item5 .matter button{font-size: 1.7rem; border-radius: 10px; background-color: transparent; border: 2px solid rgb(62, 53, 44); margin: 1rem; cursor: pointer; transition: all .5s ease;}
+
+.container4 .carousal4 .item1 .matter button:hover,.container4 .carousal4 .item2 .matter button:hover,.container4 .carousal4 .item3 .matter button:hover,.container4 .carousal4 .item4 .matter button:hover,.container4 .carousal4 .item5 .matter button:hover{ padding: 1rem;color: wheat; font-weight: bolder;}
+
+.container4 .carousal4 .item1 .matter a,.container4 .carousal4 .item2 .matter a,.container4 .carousal4 .item3 .matter a,.container4 .carousal4 .item4 .matter a,.container4 .carousal4 .item5 .matter a{font-size: 1.8rem; border-radius: 10px; border: 2px solid rgb(62, 53, 44); margin: 1rem; cursor: pointer; transition: all .5s ease; display: grid; place-content: center; text-decoration: none; color: black;}
+
+.container4 .carousal4 .item1 .matter a:hover,.container4 .carousal4 .item2 .matter a:hover,.container4 .carousal4 .item3 .matter a:hover,.container4 .carousal4 .item4 .matter a:hover,.container4 .carousal4 .item5 .matter a:hover{ padding: 1rem;color: wheat; font-weight: bolder;}
+
+.container4 .carousal4 .item1 .matter span,.container4 .carousal4 .item2 .matter span,.container4 .carousal4 .item3 .matter span,.container4 .carousal4 .item4 .matter span,.container4 .carousal4 .item5 .matter span{position: absolute; bottom: 1%; right:1%; font-size: 1.8rem; }
+
+.container4 .carousal4 .item1{background-color: rgb(48,62,125);}
+.container4 .carousal4 .item2{background-color: rgb(211,154,125);}
+.container4 .carousal4 .item3{background-color: rgb(183,112,128);}
+.container4 .carousal4 .item4{ background-color: rgb(199, 199, 199);}
+.container4 .carousal4 .item5{background-color: rgb(254,171,179);}
+
+.container4 .next4{position: absolute; top: 50%; right: 2%; font-size: 3rem; cursor: pointer; }
+.container4 .prev4{position: absolute; top: 50%; left: 2%; font-size: 3rem; cursor: pointer; }
+
+
+
+
+.loader{
+    width: 100vw; height: 100vh; position: absolute; top: 0; z-index: 20; background-color: #335004; overflow: hidden;
+}
+.loader img{width: 10rem; position: absolute; top: 30%;  animation: brush .7s alternate infinite ease;}
+.loader img:first-child, .loader img:nth-child(3){  left: 30%;}
+.loader img:nth-child(2), .loader img:nth-child(4){ right: 30%;}
+@keyframes brush {
+    100%{transform: rotate(15deg);}
+}
+.loader img:nth-child(4){ animation: pow .7s alternate infinite ease;}
+@keyframes pow {
+    100%{transform: translateY(5%);}
+}
+.loader p{font-family: 'Tangerine', cursive; width: 100vw; font-size: 6rem; color: #ffc2d0; position: absolute; top: 50%; left: 92%; transform: translate(-50%,-50%); animation: name .7s alternate .2s infinite ease;}
+@keyframes name {
+    100%{transform: translate(-50%,-20%) rotate(3deg);}
+}
+
+.ques{z-index: 10; opacity: 0; position: absolute;}
+.ques .matter{
+    width: 20vw; height: 22vh; font-size: 1.5rem; text-align: center; background-color: azure; clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 100%, 88% 76%, 0% 75%); padding:1rem; position: fixed; bottom:6%; right: 2%; opacity: 0; pointer-events: none; transform: translate(10%,10%); transition: all .5s ease;
+}
+.ques .quesicon{font-size: 4rem; color: black; right: 1.5%; position: fixed; bottom: 2%; cursor: pointer;  transition: all .5s ease;}
+@keyframes ques {
+    100%{opacity: 1;}
+}
+
+
+
+/* ⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕ */
+/* ⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁⌁ */
+        /* media queries */
+
+@media (max-width: 900px) {
+header .text{margin: 0!important; margin-left: 5%!important; padding: 0rem!important;}
+header .text .h1{font-size: 3rem; line-height: 5rem!important;  font-family: 'Poppins', sans-serif; }
+.ques .matter{font-size: 1rem;}
+.scroll{transform: translateY(-5rem); margin: 0;}
+}
+
+@media (max-width: 1200px) {
+    header .text{margin: 0 4rem; padding: 1rem;}
+header .text .h1{font-size: 3.5rem; line-height: 7rem;  font-family: 'Poppins', sans-serif; text-align: center; }
+.ques .matter{font-size: 1rem; line-height: 1.5rem;}
+}
+ 
+
+@media (max-width: 500px){
+
+    
+    .loader img:first-child, .loader img:nth-child(3){  left: 5%;}
+    .loader img:nth-child(2), .loader img:nth-child(4){ right: 5%;}
+    .loader p{left: 70%;}
+
+    body{width: 100vw; max-width: 100vw; overflow-x: hidden;}
+    nav{max-width: 100vw; padding:1rem 0rem 0rem 1rem;}
+    /* nav .logo{position: fixed;} */
+    .menu{width: 100vw; max-width: 100vw; overflow-x: hidden ;}
+
+    #veggie{width: 3rem; height: 3rem; margin: 0 0 0 1rem;}
+    
+    .menu ul{font-size: 2.5rem; margin: 6rem 0 0 3rem;} 
+
+    .ques .matter{width: 50vw;}
+
+    @keyframes logo {
+    0%{width: 100%; height: 100%;} 50%{width: 100%; height: 100%;}100%{width: 7rem; height: 7rem;} }
+
+    .cartmenu.add{width: 50rem; height: 50rem; right: -4rem; }
+
+    header{top: 0; display: flex; flex-direction: column-reverse; justify-content: space-between; max-width: 100vw;}
+
+    header .text{margin: 1rem 5rem; padding: 0%;}
+
+    header .text .h1{font-size: 2.2rem; line-height: 4rem; text-align: center;}
+    header .photos img:first-child{width: 32rem;}
+
+    header .photos .leaf1 img,header .photos .leaf2 img,header .photos .leaf3 img, header .photos .leaf4 img, header .photos .leaf5 img, header .photos .leaf6 img, header .photos .leaf7 img, header .photos .leaf8 img, header .photos .leaf9 img, header .photos .leaf10 img{width: 8rem;}
+
+    header .photos .leaf1{ right: 3rem;} header .photos .leaf2{  right: 5rem;} header .photos .leaf3{ right: 8rem;} header .photos .leaf4{right: 9rem;} header .photos .leaf5{right: 12rem;} header .photos .leaf6{  right: 15rem;} header .photos .leaf7{ right: 18rem;} header .photos .leaf8{ right: 20rem;} header .photos .leaf9{right: 22rem;} header .photos .leaf10{right: 24rem;}
+
+    .scroll{transform: translateY(-5rem); margin: 1rem 0 0 0;}
+
+    .sabout{font-size: 1.6rem; padding: 5%; line-height: 2.5rem;}
+    .sabout h1{transform: translateX(-10%); margin: 0 8%;}
+    .sabout p{word-spacing: 0rem; margin:0rem;}
+
+    #contact{height: auto;}
+    #contact .cont form{width: 100vw; margin: 1rem 0;}
+    #contact .cont form input{width: 50vw!important;}
+    #contact .cont form textarea,#contact form .name{width: 50%; height: 3rem; border-radius: 10px; background-color: #e2d8b5;}
+    #contact .cont form textarea{height: auto;}
+    #contact .cont form .h2{font-size: 1.8rem; margin: 5% 0 0 0; }
+    #contact .cont{display: flex; flex-direction: column-reverse; justify-content: space-evenly; min-width: 100vw;}
+    #contact .cont .media{ grid-template-columns: 2fr 2fr; width: 100vw; height: 40vh; margin-left: 20%;}
+    #contact  .cont form input, textarea, button{margin: 1rem;}
+    /* #contact a.fb{right: 2%; bottom: 7%;}#contact a.insta{right: 2%; bottom: 5%;}
+    #contact a.github{left: 2%; bottom: 7%;}#contact a.twitter{left: 2%; bottom: 5%;} */
+    
+/* ⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕⏕ */
+
+    
+    .container1 .carousal1 .item1,.container1 .carousal1 .item2,.container1 .carousal1 .item3,.container1 .carousal1 .item4,.container1 .carousal1 .item5{flex-direction: column;}
+    
+    .container1 .carousal1 .item1 img,.container1 .carousal1 .item2 img, .container1 .carousal1 .item3 img, .container1 .carousal1 .item4 img, .container1 .carousal1 .item5 img{ height: 40vh; width: 100%; border-radius:10px;}
+
+    .container1 .carousal1 .item1 .matter,.container1 .carousal1 .item2 .matter,.container1 .carousal1 .item3 .matter,.container1 .carousal1 .item4 .matter,.container1 .carousal1 .item5 .matter{margin: 3rem;}
+
+    .container1 .carousal1 .item1 .matter h2,.container1 .carousal1 .item2 .matter h2,.container1 .carousal1 .item3 .matter h2,.container1 .carousal1 .item4 .matter h2,.container1 .carousal1 .item5 .matter h2{font-size: 3rem; margin: 1rem 0;}
+    
+    .container1 .carousal1 .item1 .matter p,.container1 .carousal1 .item2 .matter p,.container1 .carousal1 .item3 .matter p,.container1 .carousal1 .item4 .matter p,.container1 .carousal1 .item5 .matter p{font-size: 1.7rem; margin: 0 0 1rem 0;}
+    
+    .container1 .carousal1 .item1 .matter h3,.container1 .carousal1 .item2 .matter h3,.container1 .carousal1 .item3 .matter h3,.container1 .carousal1 .item4 .matter h3,.container1 .carousal1 .item5 .matter h3{font-size: 2rem; margin:1rem 0;}
+
+    .container1 .carousal1 .item1 .matter a,.container1 .carousal1 .item2 .matter a,.container1 .carousal1 .item3 .matter a,.container1 .carousal1 .item4 .matter a,.container1 .carousal1 .item5 .matter a{font-size: 1.7rem; padding: .5rem;}
+
+    .container1 .carousal1 .item1 .matter button,.container1 .carousal1 .item2 .matter button,.container1 .carousal1 .item3 .matter button,.container1 .carousal1 .item4 .matter button,.container1 .carousal1 .item5 .matter button{font-size: 1.7rem; padding: .5rem;}
+
+    .container2 .carousal2 .item1,.container2 .carousal2 .item2,.container2 .carousal2 .item3,.container2 .carousal2 .item4,.container2 .carousal2 .item5{flex-direction: column;}
+
+    .container2 .carousal2 .item1 img,.container2 .carousal2 .item2 img, .container2 .carousal2 .item3 img, .container2 .carousal2 .item4 img, .container2 .carousal2 .item5 img{ height: 40vh; width: 100%; border-radius:10px;}
+    .container2 .carousal2 .item5 img{height: 38vh;}
+
+    .container2 .carousal2 .item1 .matter,.container2 .carousal2 .item2 .matter,.container2 .carousal2 .item3 .matter,.container2 .carousal2 .item4 .matter,.container2 .carousal2 .item5 .matter{margin: 3rem;}
+
+    .container2 .carousal2 .item1 .matter h2,.container2 .carousal2 .item2 .matter h2,.container2 .carousal2 .item3 .matter h2,.container2 .carousal2 .item4 .matter h2,.container2 .carousal2 .item5 .matter h2{font-size: 3rem; margin: 1rem 0;}
+    
+    .container2 .carousal2 .item1 .matter p,.container2 .carousal2 .item2 .matter p,.container2 .carousal2 .item3 .matter p,.container2 .carousal2 .item4 .matter p,.container2 .carousal2 .item5 .matter p{font-size: 1.7rem; margin: 0 0 1rem 0;}
+    
+    .container2 .carousal2 .item1 .matter h3,.container2 .carousal2 .item2 .matter h3,.container2 .carousal2 .item3 .matter h3,.container2 .carousal2 .item4 .matter h3,.container2 .carousal2 .item5 .matter h3{font-size: 2rem; margin:1rem 0;}
+
+    .container2 .carousal2 .item1 .matter a,.container2 .carousal2 .item2 .matter a,.container2 .carousal2 .item3 .matter a,.container2 .carousal2 .item4 .matter a,.container2 .carousal2 .item5 .matter a{font-size: 1.7rem; padding: .5rem;}
+
+    .container2 .carousal2 .item1 .matter button,.container2 .carousal2 .item2 .matter button,.container2 .carousal2 .item3 .matter button,.container2 .carousal2 .item4 .matter button,.container2 .carousal2 .item5 .matter button{font-size: 1.7rem; padding: .5rem;}
+
+    .container3 .carousal3 .item1,.container3 .carousal3 .item2,.container3 .carousal3 .item3,.container3 .carousal3 .item4,.container3 .carousal3 .item5{flex-direction: column;}
+
+    .container3 .carousal3 .item1 img,.container3 .carousal3 .item2 img, .container3 .carousal3 .item3 img, .container3 .carousal3 .item4 img, .container3 .carousal3 .item5 img{ height: 40vh; width: 100%; border-radius:10px;}
+    
+    .container3 .carousal3 .item1 .matter,.container3 .carousal3 .item2 .matter,.container3 .carousal3 .item3 .matter,.container3 .carousal3 .item4 .matter,.container3 .carousal3 .item5 .matter{margin: 3rem;}
+
+    .container3 .carousal3 .item1 .matter h2,.container3 .carousal3 .item2 .matter h2,.container3 .carousal3 .item3 .matter h2,.container3 .carousal3 .item4 .matter h2,.container3 .carousal3 .item5 .matter h2{font-size: 3rem; margin: 1rem 0;}
+    
+    .container3 .carousal3 .item1 .matter p,.container3 .carousal3 .item2 .matter p,.container3 .carousal3 .item3 .matter p,.container3 .carousal3 .item4 .matter p,.container3 .carousal3 .item5 .matter p{font-size: 1.7rem; margin: 0 0 1rem 0;}
+    
+    .container3 .carousal3 .item1 .matter h3,.container3 .carousal3 .item2 .matter h3,.container3 .carousal3 .item3 .matter h3,.container3 .carousal3 .item4 .matter h3,.container3 .carousal3 .item5 .matter h3{font-size: 2rem; margin:1rem 0;}
+    
+    .container3 .carousal3 .item1 .matter a,.container3 .carousal3 .item2 .matter a,.container3 .carousal3 .item3 .matter a,.container3 .carousal3 .item4 .matter a,.container3 .carousal3 .item5 .matter a{font-size: 1.7rem; padding: .5rem;}
+
+    .container3 .carousal3 .item1 .matter button,.container3 .carousal3 .item2 .matter button,.container3 .carousal3 .item3 .matter button,.container3 .carousal3 .item4 .matter button,.container3 .carousal3 .item5 .matter button{font-size: 1.7rem; padding: .5rem;}
+
+
+    .container4 .carousal4 .item1,.container4 .carousal4 .item2,.container4 .carousal4 .item3,.container4 .carousal4 .item4,.container4 .carousal4 .item5{flex-direction: column;}
+
+    .container4 .carousal4 .item1 img,.container4 .carousal4 .item2 img, .container4 .carousal4 .item3 img, .container4 .carousal4 .item4 img, .container4 .carousal4 .item5 img{ height: 40vh; width: 100%; border-radius:10px;}
+           
+    .container4 .carousal4 .item1 .matter,.container4 .carousal4 .item2 .matter,.container4 .carousal4 .item3 .matter,.container4 .carousal4 .item4 .matter,.container4 .carousal4 .item5 .matter{margin: 3rem;}
+
+    .container4 .carousal4 .item1 .matter h2,.container4 .carousal4 .item2 .matter h2,.container4 .carousal4 .item3 .matter h2,.container4 .carousal4 .item4 .matter h2,.container4 .carousal4 .item5 .matter h2{font-size: 3rem; margin: 1rem 0;}
+    
+    .container4 .carousal4 .item1 .matter p,.container4 .carousal4 .item2 .matter p,.container4 .carousal4 .item3 .matter p,.container4 .carousal4 .item4 .matter p,.container4 .carousal4 .item5 .matter p{font-size: 1.7rem; margin: 0 0 1rem 0;}
+    
+    .container4 .carousal4 .item1 .matter h3,.container4 .carousal4 .item2 .matter h3,.container4 .carousal4 .item3 .matter h3,.container4 .carousal4 .item4 .matter h3,.container4 .carousal4 .item5 .matter h3{font-size: 2rem; margin:1rem 0;}
+    
+    .container4 .carousal4 .item1 .matter a,.container4 .carousal4 .item2 .matter a,.container4 .carousal4 .item3 .matter a,.container4 .carousal4 .item4 .matter a,.container4 .carousal4 .item5 .matter a{font-size: 1.7rem; padding: .5rem;}
+
+    .container4 .carousal4 .item1 .matter button,.container4 .carousal4 .item2 .matter button,.container4 .carousal4 .item3 .matter button,.container4 .carousal4 .item4 .matter button,.container4 .carousal4 .item5 .matter button{font-size: 1.7rem; padding: .5rem;}
+
+}
+
+
+
+
+
+
+body{position: relative;}
+.pagetrans.itson .trans{
+    position: fixed; top: 0; left: -100vw; width: 100vw; height: 100%; pointer-events: none; z-index: 50;
+}
+.pagetrans.itson .trans.trans1{background-color: #ffc2d0; animation: side 0.7s 0s forwards ease-out;}
+.pagetrans.itson .trans.trans2{background-color: #403632; animation: side 0.7s .5s forwards ease-out;}
+.pagetrans.itson .trans.trans3{background-color: #335004; animation: side 0.7s .9s forwards ease-out;}
+@keyframes side {
+ 100%{left: 0;}
+}
+
+
+
+
